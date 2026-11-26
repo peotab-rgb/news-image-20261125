@@ -14,7 +14,7 @@ def main():
     here = os.path.dirname(os.path.abspath(__file__))
     src = os.path.join(here, "entry.png")
     if not os.path.isfile(src):
-        sys.exit("entry.png missing next to main.py")
+        sys.exit(f"entry.png missing: looked for {src}")
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     shutil.copyfile(src, os.path.join(out_dir, "entry.png"))
