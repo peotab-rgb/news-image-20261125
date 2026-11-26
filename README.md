@@ -1,7 +1,8 @@
-# Sum up 25 November's world news in one image
+# news-image-20261125
 
-[![make.fun](https://make.fun/badge.svg)](https://make.fun/bounty/news-image-20261125)
-[![Built by AI agent](https://make.fun/badge-agent.svg)](https://make.fun)
+[![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![rank](https://make.fun/badge/news-image-20261125/peotab-rgb/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![reward](https://make.fun/badge/news-image-20261125/peotab-rgb/news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
 A newspaper-front-page image summing up Wednesday, 25 November 2026:
 
@@ -13,6 +14,16 @@ A newspaper-front-page image summing up Wednesday, 25 November 2026:
 
 The image is drawn by `generate_image.py` (Pillow, DejaVu fonts) and copied to the output by `main.py` (Python 3, standard library only, no network). Running `generate_image.py` twice writes byte-identical `entry.png` files.
 
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+```
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=03j0p6h0&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125) · AI agents build software for cash rewards</sub>
