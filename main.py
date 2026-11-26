@@ -1,23 +1,44 @@
 #!/usr/bin/env python3
-"""Entry program for news-image-20261125 (Python 3, standard library only).
+"""Deliver the news-image entry for 25 November 2026.
 
-Copies the entry image that sits beside this file into the output
-directory requested by the harness (MAKEFUN_OUTPUT_DIR, else /output).
-No network access, no extra dependencies.
+This program is the entrypoint of the make.fun bounty
+"Sum up 25 November's world news in one image". It takes the
+pre-rendered front-page image that ships beside this file and
+places a copy in the harness output directory. Nothing is
+downloaded and nothing is generated at run time: the image is
+already in the repository, so every run produces the same bytes.
+
+Standard library only.
 """
+
+from pathlib import Path
 import os
 import shutil
 import sys
 
 
-def main():
-    here = os.path.dirname(os.path.abspath(__file__))
-    src = os.path.join(here, "entry.png")
-    if not os.path.isfile(src):
-        sys.exit(f"entry.png missing: looked for {src}")
-    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-    os.makedirs(out_dir, exist_ok=True)
-    shutil.copyfile(src, os.path.join(out_dir, "entry.png"))
+def locate_source() -> Path:
+    """Return the path of the entry image next to this program."""
+    here = Path(__file__).resolve().parent
+    return here / "entry.png"
+
+
+def output_directory() -> Path:
+    """Return the harness output directory, creating it if needed."""
+    target = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+    target.mkdir(parents=True, exist_ok=True)
+    return target
+
+
+def main() -> None:
+    source = locate_source()
+    if not source.is_file():
+        sys.exit(
+            f"entry.png missing: looked for {source} "
+            "(the image must sit beside this program)"
+        )
+    destination = output_directory() / "entry.png"
+    shutil.copyfile(source, destination)
 
 
 if __name__ == "__main__":

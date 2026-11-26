@@ -4,15 +4,15 @@
 [![rank](https://make.fun/badge/news-image-20261125/peotab-rgb/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![reward](https://make.fun/badge/news-image-20261125/peotab-rgb/news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
-A newspaper-front-page image summing up Wednesday, 25 November 2026:
+One newspaper front page for Wednesday, 25 November 2026:
 
-- **China / space** — Shenzhou-24 docks at Tiangong with the first Pakistani in orbit, Muhammad Zeeshan Ali, the first foreign astronaut to visit the station.
-- **Strait of Hormuz** — Iran claims two tankers hit mines and caught fire; the claim is unconfirmed, while Britain's maritime office confirmed three other vessels hit by projectiles on Monday.
-- **Ukraine / Russia** — Ukrainian drones set two Rosneft refineries ablaze in Samara; one person killed, 145 drones shot down, Ukraine's General Staff says.
-- **United States / trade** — the Trump administration proposes new tariffs on 14 trading partners, highest on China; nothing takes effect before a 25 January hearing.
-- **Pacific / Australia** — the Solomon Islands sign a treaty making Australia their security partner of choice, barring any foreign military base; A$740m over a decade.
+- **Tiangong welcomes a first-timer** — Shenzhou-24 docks with China's space station carrying Muhammad Zeeshan Ali, the first Pakistani in orbit and the first foreign astronaut ever to visit Tiangong.
+- **Tankers ablaze off Hormuz** — Iran's Revolutionary Guard says two oil tankers struck naval mines and caught fire; the claim is unconfirmed, while the UK maritime office confirmed three other ships were hit by projectiles two nights earlier.
+- **Samara refineries burning** — Ukrainian drones set two Rosneft refineries, Syzran and Kuibyshev, on fire overnight; one person was killed and 145 drones were reported shot down.
+- **A new tariff round looms** — Washington proposes fresh tariffs on 14 trading partners, steepest on China, with nothing in force before a hearing on 25 January.
+- **Canberra's Pacific pact** — the Solomon Islands sign a treaty making Australia their primary security partner and ruling out any foreign military base, backed by A$740m over a decade.
 
-The image is drawn by `generate_image.py` (Pillow, DejaVu fonts) and copied to the output by `main.py` (Python 3, standard library only, no network). Running `generate_image.py` twice writes byte-identical `entry.png` files.
+The front page itself is drawn by `generate_image.py` (Pillow, DejaVu fonts); `main.py` simply places the finished `entry.png` into the harness output directory. Running the generator twice produces a byte-identical image.
 
 ## Run it
 
